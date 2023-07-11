@@ -11,8 +11,7 @@ import java.util.Optional;
 public interface BidRepository extends CrudRepository<Bid, Integer> {
     Optional<Bid> findFirstByLot_IdOrderByDateTimeAsc(int lotId);
 
-    @Query("SELECT b.name, max(b.dateTime) FROM Bid b WHERE b.lot.id = :id GROUP BY b.name HAVING count(b.name) =" +
-            "(SELECT count(bi.name) FROM Bid bi WHERE bi.lot.id = :id GROUP BY bi.name ORDER BY count(bi.name) DESC LIMIT 1)")
+    @Query("SELECT new com.example.auction.dto.BidDTO (b.name, max(b.dateTime)) from Bid b where b.lot.id = :id group by b.name order by count(b.name) desc limit 1")
     BidDTO maxCountBidder(int id);
 
     List<Bid> findAllByLot_Id(int lotId);

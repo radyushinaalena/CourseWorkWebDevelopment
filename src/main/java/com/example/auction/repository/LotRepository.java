@@ -16,13 +16,16 @@ public interface LotRepository extends PagingAndSortingRepository<Lot, Integer>,
 
     Page<Lot> findAllByStatus(Status status, Pageable pageable);
 
-    @Query(value = "SELECT l.id, l.title, l.status,last_time.name, count(b)*l.bid_price+l.start_price" +
-            " FROM lots l JOIN bids b on l.id = b.lot_id " +
+    @Query(value = "SELECT l.id, l.title, l.status,last_time.name, count(b)*l.bid_price+l.start_price " +
+            "FROM lots l " +
+            "LEFT JOIN bids b on l.id = b.lot_id " +
             "LEFT JOIN " +
-            "(SELECT b.name, b.lot_id, b.date_time FROM bids b RIGHT JOIN " +
+            "(SELECT b.name, b.lot_id, b.date_time FROM bids b " +
+            "RIGHT JOIN " +
             "(SELECT bi.lot_id, max(bi.date_time) as time FROM bids bi GROUP BY bi.lot_id) as max_time " +
             "ON max_time.lot_id = b.lot_id " +
             "and time = b.date_time) as last_time on l.id = last_time.lot_id " +
-            "GROUP BY l.id, l.title, l.status, last_time.name", nativeQuery = true)
+            "GROUP BY l.id, l.title, l.status, last_time.name " +
+            "ORDER BY l.id asc", nativeQuery = true)
     List<Object[]> getAllLotsForCsv();
 }
