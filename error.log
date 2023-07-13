@@ -1,0 +1,36 @@
+20:26:38.877 [main] INFO  c.e.auction.CourseAuctionApplication - Starting CourseAuctionApplication using Java 17.0.7 with PID 25028 (C:\Users\Alena\IdeaProjects\CourseAuction\target\classes started by Alena in C:\Users\Alena\IdeaProjects\CourseAuction)
+20:26:38.877 [main] DEBUG c.e.auction.CourseAuctionApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+20:26:38.878 [main] INFO  c.e.auction.CourseAuctionApplication - No active profile set, falling back to 1 default profile: "default"
+20:26:44.260 [main] INFO  c.e.auction.CourseAuctionApplication - Started CourseAuctionApplication in 5.738 seconds (process running for 6.754)
+20:30:59.867 [http-nio-8888-exec-1] DEBUG c.e.auction.service.LotServiceImpl - Поиск лота по id: 1
+20:31:00.139 [http-nio-8888-exec-1] DEBUG c.e.auction.service.LotServiceImpl - Лот с id : 1 найден
+20:31:30.510 [http-nio-8888-exec-6] DEBUG c.e.auction.service.LotServiceImpl - Поиск лота по id: 10
+20:31:30.514 [http-nio-8888-exec-6] ERROR c.e.a.exception.LotNotFoundException - Лот с id: 10 не найден
+20:32:02.707 [http-nio-8888-exec-7] DEBUG c.e.auction.service.BidServiceImpl - Получение имени максимально ставившего раз по лоту с id : 1 
+20:32:02.746 [http-nio-8888-exec-7] DEBUG c.e.auction.service.BidServiceImpl - Получено имя максимально ставившего раз по лоту с id : 1 
+20:32:51.027 [http-nio-8888-exec-5] DEBUG c.e.auction.service.BidServiceImpl - Получение имени максимально ставившего раз по лоту с id : 4 
+20:32:51.034 [http-nio-8888-exec-5] DEBUG c.e.auction.service.BidServiceImpl - Лот с id : 4 найден
+20:32:51.035 [http-nio-8888-exec-5] ERROR c.e.a.exception.LotNotFoundException - Лот с id: 4 не найден
+20:33:05.046 [http-nio-8888-exec-9] DEBUG c.e.auction.service.BidServiceImpl - Получаем информацию о первом ставившем на лот с id: 1 
+20:33:05.049 [http-nio-8888-exec-9] DEBUG c.e.auction.service.BidServiceImpl - Получена информацию о первом ставившем на лот с id: 1
+20:34:23.398 [http-nio-8888-exec-8] DEBUG c.e.auction.service.LotServiceImpl - Начало экпорта лотов в файл с расширением csv
+20:34:23.411 [http-nio-8888-exec-8] DEBUG c.e.auction.service.LotServiceImpl - Лоты экспортированы в файл с расширением csv
+20:36:07.307 [http-nio-8888-exec-10] DEBUG c.e.auction.service.BidServiceImpl - Создание новой ставки по лоту с id : 1 
+20:36:07.328 [http-nio-8888-exec-10] DEBUG c.e.auction.service.BidServiceImpl - Лот с id : 1 находится в неправильном статусе
+20:36:07.328 [http-nio-8888-exec-10] ERROR c.e.a.e.LotWrongStatusException - Лот с id: 1 находится в неправильном статусе
+20:36:31.606 [http-nio-8888-exec-1] DEBUG c.e.auction.service.BidServiceImpl - Создание новой ставки по лоту с id : 2 
+20:36:31.609 [http-nio-8888-exec-1] DEBUG c.e.auction.service.BidServiceImpl - Лот с id : 2 находится в неправильном статусе
+20:36:31.609 [http-nio-8888-exec-1] ERROR c.e.a.e.LotWrongStatusException - Лот с id: 2 находится в неправильном статусе
+20:36:42.746 [http-nio-8888-exec-2] DEBUG c.e.auction.service.BidServiceImpl - Создание новой ставки по лоту с id : 3 
+20:36:42.899 [http-nio-8888-exec-2] DEBUG c.e.auction.service.BidServiceImpl - Создана новая ставка по лоту с id : 3 
+20:37:10.338 [http-nio-8888-exec-7] DEBUG c.e.auction.service.BidServiceImpl - Получение имени максимально ставившего раз по лоту с id : 3 
+20:37:10.349 [http-nio-8888-exec-7] DEBUG c.e.auction.service.BidServiceImpl - Получено имя максимально ставившего раз по лоту с id : 3 
+20:37:42.517 [http-nio-8888-exec-5] DEBUG c.e.auction.service.BidServiceImpl - Создание новой ставки по лоту с id : 3 
+20:37:42.524 [http-nio-8888-exec-5] DEBUG c.e.auction.service.BidServiceImpl - Создана новая ставка по лоту с id : 3 
+20:37:47.473 [http-nio-8888-exec-4] DEBUG c.e.auction.service.BidServiceImpl - Получение имени максимально ставившего раз по лоту с id : 3 
+20:37:47.476 [http-nio-8888-exec-4] DEBUG c.e.auction.service.BidServiceImpl - Получено имя максимально ставившего раз по лоту с id : 3 
+20:38:26.528 [http-nio-8888-exec-8] DEBUG c.e.auction.service.LotServiceImpl - Поиск лота по id: 1 для начала торгов
+20:38:26.571 [http-nio-8888-exec-8] DEBUG c.e.auction.service.LotServiceImpl - Торги по лоту с id: 1 начаты
+20:38:51.656 [http-nio-8888-exec-10] DEBUG c.e.auction.service.LotServiceImpl - Поиск лота по id: 1 для остановки торгов
+20:38:51.662 [http-nio-8888-exec-10] DEBUG c.e.auction.service.LotServiceImpl - Торги по лоту с id: 1 остановлены
+20:39:15.515 [http-nio-8888-exec-2] DEBUG c.e.auction.service.LotServiceImpl - Создан новый лот test3
